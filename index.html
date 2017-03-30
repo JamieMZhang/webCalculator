@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <title>||Mortgage Calculator||Compare different periods</title>
+  <style>
+  body {
+  	background-color: #EEEEEE;
+  }
+  h2{
+  	text-align: center;
+  	margin-top: 5%;
+  	margin-bottom: 5%;
+  }
+  	form{
+  		text-align: center;
+  	}
+  	label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 40%;
+    text-align: right;
+	}
+	form input[type=text] {
+  	display: inline-block;
+  	float: left;
+  	width: 20%;
+  	margin-left: 10px;
+	}
+	input[type=text] {
+  	display: inline-block;
+  	float: left;
+  	width: 20%;
+  	margin-left: 10px;
+	}
+
+	input[type=submit] {
+    padding:5px 30px; 
+    background:#0c0; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	}
+	input[id=textbox4] {
+    border:0 none;
+    cursor:pointer;
+	}
+	select{
+	float: left;
+	width: 21%;
+  	margin-left: 10px;
+	}
+	</style>
+</head> 
+<script src="example.js"> </script>
+ 
+<body> 
+<h2> Mortgage Calculator</h2>
+
+<form id = "inForm" onsubmit="myfunction();return false">
+	<label>Total Loans: </label> <input type="text" name="textbox1" id="textbox1" placeholder="$" autocomplete="on"/>
+	</br></br>
+	<label>Years:</label><input type="text" name="textbox2" id="textbox2" placeholder="Loan terms in Years" autocomplete="on"/> 
+	</br></br>
+	<label>Rates:</label><input type="text" name="textbox3" id="textbox3" placeholder="%" autocomplete="on"/> 
+	</br></br>
+
+	<label>Pay Options: </label>
+	<select name="Options" form="pay" id = "options">
+		<option value="1">Yearly</option>
+		<option value="12">Monthly</option>
+		<option value="26">Fornightly</option>
+		<option value="52">Weekly</option>
+	</select>
+	</br></br>
+
+	<input type="submit" name="button" id="button1" value="Calculate" />
+
+</form>
+
+
+
+<br/><br/>
+
+<label>Results:</label> <input type="text" name="textbox4" id="textbox4" readonly="true"/>
+
+<br/><br/>
+<div id="metric_results">
+
+</br>
+</div>
+
+
+</body>
+ </html>
